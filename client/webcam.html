@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Cam Video</title>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+</head>
+<body>
+
+      <div class="booth">
+       <form action="javascript:void(0);">
+                                    <input type="text" id="inputMsg" required>
+                                    <button onclick="sendsocket()">보내기</button>
+                                </form>
+          <video id="video" width="800" height="600" autoplay=""></video>
+          <canvas id="canvas" width="800" height="600"></canvas>
+      </div>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+      
+        <!-- <script type="text/javascript">
+       var socket = io('http://localhost:3000');
+       // var socket = io.connect("10.175.151.54:3000"); 
+                                    var res = document.querySelector("#response");
+                                    var msg = document.querySelector("#inputMsg");
+
+                                    socket.on('message_from_server', function(data) {
+                                        console.log(data);
+                                        //res.innerHTML = "<p>" + data + "</p>";
+                                    });
+
+                                    function sendsocket() {
+                                        console.log("sendsocket");
+                                        socket.emit('message_from_client', inputMsg.value);
+                                    }
+      </script> -->
+ <script src="./javascripts/video.js"></script> 
+</body>
+</html>
